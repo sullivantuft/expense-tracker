@@ -1,0 +1,43 @@
+FUNCTION days_in_month(year, month):
+    days_in_months <- [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31] #A
+    IF month == 2 AND is_leap_year(year): #B
+        RETURN 29 #C
+    ELSE:
+        RETURN days_in_months[month - 1] #D
+
+FUNCTION days_between(start_year, start_month, start_day, end_year, end_month, end_day):
+    IF start_year == end_year: #E
+        total_days <- 0 #F
+        IF start_month == end_month: #G
+            RETURN end_day - start_day #H
+        ELSE: 
+            total_days <- days_in_month(start_year, start_month) - start_day #I
+
+            FOR month FROM start_month + 1 TO end_month - 1: #J
+                total_days <- total_days + days_in_month(start_year, month) #K
+
+            total_days <- total_days + end_day #L
+
+            RETURN total_days #M
+    
+    total_days <- 0 #N
+
+
+    total_days <- total_days + (days_in_month(start_year, start_month) - start_day) #O
+
+    FOR month FROM start_month + 1 TO 12: #P
+        total_days <- total_days + days_in_month(start_year, month) #Q
+
+    FOR year FROM start_year + 1 TO end_year - 1: #R
+        IF is_leap_year(year): #S
+            total_days <- total_days + 366 #T
+        ELSE:
+            total_days <- total_days + 365 #U
+
+    FOR month FROM 1 TO end_month - 1: #V
+
+        total_days <- total_days + days_in_month(end_year, month) #W
+
+    total_days <- total_days + end_day #X
+
+    RETURN total_days #Y

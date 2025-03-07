@@ -1,0 +1,15 @@
+/* App.css */
+.App {
+  display: flex;
+  flex-direction: column; /* Align elements vertically */
+  justify-content: center; /* Center vertically */
+  align-items: center; /* Center horizontally */
+  height: 100vh; /* Take up the full height of the viewport */
+  text-align: center; /* Center the text inside the elements */
+  padding: 20px; /* Optional: Adds some space around the content */
+}
+
+ul {
+  list-style-type: none; /* Remove default list bullets */
+  padding: 0;
+}
