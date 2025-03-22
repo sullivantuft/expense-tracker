@@ -27,7 +27,7 @@ Libraries: React, Chart.js
 {Make a list of websites that you found helpful in this project}
 * [React](https://react.dev/)
 * [W3 Schools](https://www.w3schools.com/js/)
-* [Chart.js](https://www.w3schools.com/js/](https://www.chartjs.org/)
+* [Chart.js](https://www.chartjs.org/)
 
 # Future Work
 
